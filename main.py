@@ -28,16 +28,19 @@ data['dependencies'] = {}
 print("Do you wish to install dependencies for the selected language (Recomended): Y/n"),
 readStr = raw_input()
 if(readStr.lower() == 'y') :
+
+    # Create a node_modules folder in the directory
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    fullfoldername = os.path.join(dir_path, './node_modules')
+    if not os.path.exists(fullfoldername):
+        os.makedirs(fullfoldername)
+
     print('Select your dependencies to be installed :')
     # If user selects NodeJs.
     # Install Modules for node.
     if(readInt == 1) :
 
         #Added support for downloading modules and saving it to node_modules
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        fullfoldername = os.path.join(dir_path, './node_modules')
-        if not os.path.exists(fullfoldername):
-            os.makedirs(fullfoldername)
         urllib.urlretrieve("http://github.com", 'node_modules/filename')
 
         # Module1
@@ -60,10 +63,6 @@ if(readStr.lower() == 'y') :
     elif(readInt == 2):
 
         # Added support for downloading modules and saving it to node_modules
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        fullfoldername = os.path.join(dir_path, './node_modules')
-        if not os.path.exists(fullfoldername):
-            os.makedirs(fullfoldername)
         urllib.urlretrieve("http://github.com", 'node_modules/filename')
 
         # Module1
@@ -86,10 +85,6 @@ if(readStr.lower() == 'y') :
     else :
 
         # Added support for downloading modules and saving it to node_modules
-        dir_path = os.path.dirname(os.path.realpath(__file__))
-        fullfoldername = os.path.join(dir_path, './node_modules')
-        if not os.path.exists(fullfoldername):
-            os.makedirs(fullfoldername)
         urllib.urlretrieve("http://github.com", 'node_modules/filename');
 
         # Module1

@@ -1,5 +1,10 @@
 {
+    "dependencies": {
+        "php_mod3": "3.1.1", 
+        "php_mod2": "3.1.1", 
+        "php_mod1": "3.1.1"
+    }, 
     "language": [
-        "Nodejs"
+        "php"
     ]
 }
