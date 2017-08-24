@@ -1,4 +1,6 @@
 import json
+import os
+import urllib
 
 data = {} # Initialising an empty Dictionary
 
@@ -30,6 +32,14 @@ if(readStr.lower() == 'y') :
     # If user selects NodeJs.
     # Install Modules for node.
     if(readInt == 1) :
+
+        #Added support for downloading modules and saving it to node_modules
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        fullfoldername = os.path.join(dir_path, './node_modules')
+        if not os.path.exists(fullfoldername):
+            os.makedirs(fullfoldername)
+        urllib.urlretrieve("http://github.com", 'node_modules/filename')
+
         # Module1
         print("node_mod1 Y/n :"),
         temp = raw_input()
@@ -48,6 +58,14 @@ if(readStr.lower() == 'y') :
     # If user selects php.
     # Install dependencies for php.
     elif(readInt == 2):
+
+        # Added support for downloading modules and saving it to node_modules
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        fullfoldername = os.path.join(dir_path, './node_modules')
+        if not os.path.exists(fullfoldername):
+            os.makedirs(fullfoldername)
+        urllib.urlretrieve("http://github.com", 'node_modules/filename')
+
         # Module1
         print("php_mod1 Y/n :"),
         temp = raw_input()
@@ -66,6 +84,14 @@ if(readStr.lower() == 'y') :
     # If user selects python.
     # Install packages for python
     else :
+
+        # Added support for downloading modules and saving it to node_modules
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        fullfoldername = os.path.join(dir_path, './node_modules')
+        if not os.path.exists(fullfoldername):
+            os.makedirs(fullfoldername)
+        urllib.urlretrieve("http://github.com", 'node_modules/filename');
+
         # Module1
         print("py_mod1 Y/n :"),
         temp = raw_input()
