@@ -25,7 +25,7 @@ with open('package.json','w') as outfile:
 # Initialise the dependencies key
 data['dependencies'] = {}
 # Add dependencies the user selects to package.json
-print("Do you wish to install dependencies for the selected language (Recomended): Y/n"),
+print("Do you wish to install dependencies for the selected language (Recommended): Y/n"),
 readStr = raw_input()
 if(readStr.lower() == 'y') :
 
@@ -40,8 +40,8 @@ if(readStr.lower() == 'y') :
     # Install Modules for node.
     if(readInt == 1) :
 
-        #Added support for downloading modules and saving it to node_modules
-        urllib.urlretrieve("http://github.com", 'node_modules/filename')
+        # Added support for downloading modules and saving it to node_modules
+        # urllib.urlretrieve("http://github.com", 'node_modules/filename')
 
         # Module1
         print("node_mod1 Y/n :"),
@@ -63,7 +63,7 @@ if(readStr.lower() == 'y') :
     elif(readInt == 2):
 
         # Added support for downloading modules and saving it to node_modules
-        urllib.urlretrieve("http://github.com", 'node_modules/filename')
+        # urllib.urlretrieve("http://github.com", 'node_modules/filename')
 
         # Module1
         print("php_mod1 Y/n :"),
@@ -85,7 +85,7 @@ if(readStr.lower() == 'y') :
     else :
 
         # Added support for downloading modules and saving it to node_modules
-        urllib.urlretrieve("http://github.com", 'node_modules/filename');
+        # urllib.urlretrieve("http://github.com", 'node_modules/filename');
 
         # Module1
         print("py_mod1 Y/n :"),
